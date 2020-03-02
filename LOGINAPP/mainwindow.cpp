@@ -27,22 +27,19 @@ void MainWindow::on_pushButton_clicked()
     QString pasword = ui->lineEdit_2->text();
 
 
-
-    if (username=="muchira jn" && pasword=="junior"){
+//uncomment the condition and put your default username and password for verification
+   // if (username=="username" && pasword=="password"){
         ui->statusBar->showMessage("thank you for the succesful login",5000);
         QMessageBox::information(this,"signin","log in succesful");
 
         hide();
-//        Secondpage page2;
-//        page2.setModal(true);
-//        page2.exec();
 
         page2 = new Secondpage(this);
         page2 -> show();
-    }
-    else {
+    //}
+   /* else {
          ui->statusBar->showMessage("that was awful please try to sign in again",5000);
         QMessageBox::warning(this,"signin","incorrect name or pasword");
 
-    }
+    }*/
 }
